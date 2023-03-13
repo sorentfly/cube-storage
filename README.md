@@ -19,7 +19,7 @@
 
 1. Поднимите СУБД MySQL любым доступным способом. Я предлагаю ипользовать Docker `docker run --name mysql -e MYSQL_ROOT_PASSWORD=MySupaStrongPW -e MYSQL_DATABASE=cubes -p 3333:3306 -d mysql`.
 1. Настройте подключение к СУБД в файле `.env` (его можно создать на иснове файла `.env.example`)
-1. Подругите зависимости composer. `composer install`
+1. Подгрузите зависимости composer. `composer install`
 1. Заполните БД тестовыми данными `php artisan migrate:fresh --seed`
 1. Запустите приложение, например, используя команду `php -S localhost:8000 -t public`
 1. Готово!
