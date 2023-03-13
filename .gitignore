@@ -4,6 +4,7 @@
 /storage/*.pem
 .env
 .env.*
+.editorconfig
 !.env.example
 Homestead.yaml
 Homestead.json
