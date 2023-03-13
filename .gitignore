@@ -1,0 +1,11 @@
+/vendor
+/node_modules
+/storage/*.key
+/storage/*.pem
+.env
+.env.*
+!.env.example
+Homestead.yaml
+Homestead.json
+.phpunit.result.cache
+.phpstorm.meta.php
