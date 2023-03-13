@@ -21,7 +21,9 @@ use App\Http\Controllers\CubeController;
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return response()->json([
+        'version' => $router->app->version(),
+    ]);
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
