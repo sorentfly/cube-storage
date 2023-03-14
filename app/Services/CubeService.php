@@ -58,9 +58,9 @@ class CubeService
      * Метод для извлечения Кубика из Коробки
      *
      * @param int $cube_id Идентификатор Кубика
-     * @return bool Результат операции
+     * @return bool|null Результат операции
      */
-    public function removeCube(int $cube_id): bool
+    public function removeCube(int $cube_id): bool|null
     {
         return $this->cubeRepository->removeCube($cube_id);
     }
