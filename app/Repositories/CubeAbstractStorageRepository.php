@@ -3,12 +3,13 @@
 namespace App\Repositories;
 
 use App\Contracts\CubeRepositoryInterface;
+use Illuminate\Pagination\Paginator;
 
 class CubeAbstractStorageRepository implements CubeRepositoryInterface
 {
-    public function getAllCubes()
+    public function getAllCubes(): Paginator
     {
-        return [
+        return new Paginator([
             [
                 'id' => 1,
                 'box_id' => 1,
@@ -24,20 +25,20 @@ class CubeAbstractStorageRepository implements CubeRepositoryInterface
                 'box_id' => 3,
                 'color_id' => 3
             ],
-        ];
+        ], 10);
     }
 
-    public function countCubesByColor($color_id)
+    public function countCubesByColor(int $color_id): int
     {
-        return rand(100);
+        return rand(0, 100);
     }
 
-    public function addCube($box_id, $color_id)
+    public function addCube(int $box_id, int $color_id): int
     {
         return 4;
     }
 
-    public function removeCube($cube_id)
+    public function removeCube(int $cube_id): bool
     {
         return [true, false][rand(0,1)];
     }
