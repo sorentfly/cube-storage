@@ -10,9 +10,7 @@ use App\Models\Cube;
 class CubeStorageRepository implements CubeRepositoryInterface
 {
     /**
-     * Получение пагинированного списка Кубиков
-     *
-     * @return LengthAwarePaginator Пагинированный список Кубиков
+     * @inheritDoc
      */
     public function getAllCubes(): LengthAwarePaginator
     {
@@ -20,10 +18,7 @@ class CubeStorageRepository implements CubeRepositoryInterface
     }
 
     /**
-     * Метод для подсчёта количества Кубиков определённого цвета
-     *
-     * @param int $color_id Идентификатор Цвета
-     * @return int Количество Кубиков по переданному идентификатору Цвета
+     * @inheritDoc
      */
     public function countCubesByColor(int $color_id): int
     {
@@ -34,11 +29,7 @@ class CubeStorageRepository implements CubeRepositoryInterface
     }
 
     /**
-     * Метод для добавления Кубика в конкретную Коробку
-     *
-     * @param int $box_id Идентификатор Коробки
-     * @param int $color_id Идентификатор Цвета
-     * @return int Идентификатор Кубика
+     * @inheritDoc
      */
     public function addCube(int $box_id, int $color_id): int
     {
@@ -46,10 +37,7 @@ class CubeStorageRepository implements CubeRepositoryInterface
     }
 
     /**
-     * Метод для извлечения Кубика из Коробки
-     *
-     * @param int $cube_id Идентификатор Кубика
-     * @return bool Результат операции
+     * @inheritDoc
      */
     public function removeCube(int $cube_id): bool
     {

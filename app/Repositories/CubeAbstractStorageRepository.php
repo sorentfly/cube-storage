@@ -7,6 +7,9 @@ use Illuminate\Pagination\Paginator;
 
 class CubeAbstractStorageRepository implements CubeRepositoryInterface
 {
+    /**
+     * @inheritDoc
+     */
     public function getAllCubes(): Paginator
     {
         return new Paginator([
@@ -28,16 +31,25 @@ class CubeAbstractStorageRepository implements CubeRepositoryInterface
         ], 10);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function countCubesByColor(int $color_id): int
     {
         return rand(0, 100);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function addCube(int $box_id, int $color_id): int
     {
         return 4;
     }
 
+    /**
+     * @inheritDoc
+     */
     public function removeCube(int $cube_id): bool
     {
         return [true, false][rand(0,1)];
