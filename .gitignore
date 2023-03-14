@@ -2,6 +2,7 @@
 /node_modules
 /storage/*.key
 /storage/*.pem
+.idea/
 .env
 .env.*
 .editorconfig
