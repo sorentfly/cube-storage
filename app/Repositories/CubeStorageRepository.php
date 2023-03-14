@@ -10,7 +10,7 @@ class CubeStorageRepository implements CubeRepositoryInterface
 {
     public function getAllCubes()
     {
-        return Cube::all();
+        return Cube::paginate();
     }
 
     public function countCubesByColor($color_id)
