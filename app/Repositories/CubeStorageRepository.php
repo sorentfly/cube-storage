@@ -23,14 +23,11 @@ class CubeStorageRepository implements CubeRepositoryInterface
 
     public function addCube($box_id, $color_id)
     {
-        return DB::table('cubes')
-                ->insertGetId(compact('box_id', 'color_id'));
+        return Cube::create(compact('box_id', 'color_id'))?->id;
     }
 
     public function removeCube($cube_id)
     {
-        return DB::table('cubes')
-                ->where('id', $cube_id)
-                ->delete();
+        return Cube::find($cube_id)?->delete();
     }
 }

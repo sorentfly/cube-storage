@@ -12,6 +12,8 @@ class Cube extends Model
 
     protected $factory = CubeFactory::class;
 
+    protected $fillable = ['box_id', 'color_id'];
+
     public $timestamps = false;
     
     public function box()
