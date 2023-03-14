@@ -21,6 +21,11 @@ class Color extends Model
 
     public $timestamps = false;
 
+    /**
+     * Отношение к Коробкам
+     *
+     * @return HasMany
+     */
     public function boxes(): HasMany
     {
         return $this->hasMany(Box::class);

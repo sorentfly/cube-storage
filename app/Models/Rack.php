@@ -21,6 +21,11 @@ class Rack extends Model
 
     public $timestamps = false;
 
+    /**
+     * Отношние к Полкам
+     *
+     * @return HasMany
+     */
     public function shelves(): HasMany
     {
         return $this->hasMany(Shelf::class);

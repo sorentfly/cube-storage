@@ -22,11 +22,21 @@ class Cube extends Model
 
     public $timestamps = false;
 
+    /**
+     * Отношение к Коробке
+     *
+     * @return BelongsTo
+     */
     public function box(): BelongsTo
     {
         return $this->belongsTo(Box::class);
     }
 
+    /**
+     * Отношение к Цвету
+     *
+     * @return BelongsTo
+     */
     public function color(): BelongsTo
     {
         return $this->belongsTo(Color::class);

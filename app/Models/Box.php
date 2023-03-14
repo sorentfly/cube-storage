@@ -20,15 +20,25 @@ class Box extends Model
 
     protected string $factory = BoxFactory::class;
 
-    protected $fillable = ['title'];
+    protected $fillable = ['title', 'shelf_id'];
 
     public $timestamps = false;
 
+    /**
+     * Отношение к Кубикам
+     *
+     * @return HasMany
+     */
     public function cubes(): HasMany
     {
         return $this->hasMany(Cube::class);
     }
 
+    /**
+     * Отношение к Полке
+     *
+     * @return BelongsTo
+     */
     public function shelf(): BelongsTo
     {
         return $this->belongsTo(Shelf::class);
