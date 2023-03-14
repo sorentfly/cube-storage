@@ -50,8 +50,8 @@ class CubeAbstractStorageRepository implements CubeRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function removeCube(int $cube_id): bool
+    public function removeCube(int $cube_id): bool|null
     {
-        return [true, false][rand(0,1)];
+        return [true, false, null][rand(0,2)];
     }
 }

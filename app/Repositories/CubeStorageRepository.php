@@ -39,7 +39,7 @@ class CubeStorageRepository implements CubeRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function removeCube(int $cube_id): bool
+    public function removeCube(int $cube_id): bool|null
     {
         return Cube::find($cube_id)?->delete();
     }
